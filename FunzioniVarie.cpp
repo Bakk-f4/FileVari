@@ -70,6 +70,17 @@ void headInsert(list &l, std::string s){			//head insert
 	
 }
 
+void headRemove(list &s){					//cancello l elemento in testa alla lsita
+	if(s == nullptr){
+		std::string err = "The stack is empty\n";
+		throw err;
+	}
+	cell *aux = new cell;					// creo un aux per tenere traccia dell elemento
+	aux = s;
+	s = s->next;						//scorro la lista in avanti e
+	delete aux;						// e cancello il primo elemento
+}
+
 
 void convDateTime(STRUCT CON UNA DATA E ORA DA MODIFICARE &){	//06 06 20
 	int newDate = r.date;
